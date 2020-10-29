@@ -111,7 +111,7 @@ function signUp(){
             swal('Your Account Created','Your account was created successfully, you can log in now.',
             ).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("../index.html");
+                    window.location.replace("../index.php");
                 }, 1000)
             });
         }).catch((error) => {
@@ -180,7 +180,14 @@ function signIn(){
                 title: 'Succesfully signed in', 
             }).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("./pages/profile.html");
+                    $.ajax({
+                    type : "POST",  //type of method
+                    url  : "../inc/userset.php",  //your page
+                    data : {auth : value },// passing the values
+                    success: function(res){
+                    }
+                    });
+                    window.location.replace("../pages/profile.php");
                 }, 1000)
             });
         }).catch((error) => {
@@ -294,7 +301,15 @@ function signOut(){
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("../index.html");
+                $.ajax({
+                    type : "POST",  //type of method
+                    url  : "../inc/userlogout.php",  //your page
+                    data : {auth : value },// passing the values
+                    success: function(res){  
+                       
+                    }
+                    });
+                window.location.replace("../index.php");
             }, 1000)
         });
     }).catch(function(error) {
