@@ -182,12 +182,12 @@ function signIn(){
                 setTimeout(function(){
                     $.ajax({
                     type : "POST",  //type of method
-                    url  : "http://localhost:8001/firebase/inc/userset.php",  //your page
+                    url  : "../firebase/inc/userset.php",  //your page
                     data : {auth : value },// passing the values
                     success: function(res){
                     }
                     });
-                    window.location.replace("http://localhost:8001/firebase/pages/profile.php");
+                    window.location.replace("../firebase/pages/profile.php");
                 }, 1000)
             });
         }).catch((error) => {
