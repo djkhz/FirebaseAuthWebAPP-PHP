@@ -124,13 +124,13 @@
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyBGTi4oZxunbqbx7K2LlEU1mnDAAlVSKhQ",
-    authDomain: "ft-test-63e13.firebaseapp.com",
-    databaseURL: "https://ft-test-63e13.firebaseio.com",
-    projectId: "ft-test-63e13",
-    storageBucket: "ft-test-63e13.appspot.com",
-    messagingSenderId: "210338473553",
-    appId: "1:210338473553:web:2ad3f75d83d485ce8afa70"
+    apiKey: "AIzaSyDuFBysliGA3WfKCX6w8w_MvmlSsAwFOoA",
+  authDomain: "authentication-php.firebaseapp.com",
+  projectId: "authentication-php",
+  storageBucket: "authentication-php.appspot.com",
+  messagingSenderId: "416197084692",
+  appId: "1:416197084692:web:54a8497635e04ef0d58901",
+  measurementId: "G-6RQR0ZMTQX"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
